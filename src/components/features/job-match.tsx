@@ -32,6 +32,7 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "../ui/skeleton";
 import { useToast } from "@/hooks/use-toast";
 import React from "react";
+import Link from "next/link";
 
 const formSchema = z.object({
   jobDescriptionText: z
@@ -88,6 +89,22 @@ export default function JobMatch({ resumeText }: JobMatchProps) {
     } finally {
       setLoading(false);
     }
+  }
+  
+  if (!resumeText) {
+    return (
+      <Card className="border-secondary">
+        <CardHeader>
+          <CardTitle>Job Description Match & Keyword Analysis</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground">Please import your resume first to use this feature.</p>
+          <Button asChild variant="link" className="px-0">
+            <Link href="/resume">Go to Resume Importer</Link>
+          </Button>
+        </CardContent>
+      </Card>
+    )
   }
 
   return (

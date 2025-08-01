@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
+import Link from 'next/link';
 import {
   generateResumeSummary,
   type GenerateResumeSummaryOutput,
@@ -47,7 +48,8 @@ export default function SmartSummary({ resumeText }: SmartSummaryProps) {
     try {
       const res = await generateResumeSummary({ resumeText });
       setResult(res);
-    } catch (error) {
+    } catch (error)
+     {
       console.error(error);
       toast({
         title: "Error",
@@ -57,6 +59,22 @@ export default function SmartSummary({ resumeText }: SmartSummaryProps) {
     } finally {
       setLoading(false);
     }
+  }
+
+  if (!resumeText) {
+    return (
+      <Card className="border-secondary">
+        <CardHeader>
+          <CardTitle>Smart Summary Generator</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground">Please import your resume first to use this feature.</p>
+          <Button asChild variant="link" className="px-0">
+            <Link href="/resume">Go to Resume Importer</Link>
+          </Button>
+        </CardContent>
+      </Card>
+    )
   }
 
   return (

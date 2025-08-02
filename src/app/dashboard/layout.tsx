@@ -11,6 +11,7 @@ import {
   Goal,
   PenLine,
   LayoutDashboard,
+  FileSignature,
 } from "lucide-react";
 import Logo from "@/components/icons/logo";
 import { cn } from "@/lib/utils";
@@ -18,6 +19,7 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/resume", label: "Resume", icon: FileText },
+  { href: "/templates", label: "Templates", icon: FileSignature },
   { href: "/summary", label: "Summary", icon: Sparkles },
   { href: "/bullets", label: "Bullets", icon: ListChecks },
   { href: "/skills", label: "Skills", icon: Award },
@@ -50,7 +52,7 @@ export default function DashboardLayout({
               href={href}
               className={cn(
                 "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                pathname === href
+                (pathname.startsWith(href) && href !== '/dashboard') || pathname === href
                   ? "bg-primary text-primary-foreground"
                   : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
               )}

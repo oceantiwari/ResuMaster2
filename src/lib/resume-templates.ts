@@ -1,32 +1,36 @@
 
+
+export interface ResumeTemplateContent {
+    header: {
+        name: string;
+        contact: {
+            phone: string;
+            email: string;
+            linkedin: string;
+        }
+    },
+    summary: string;
+    experience: {
+        title: string;
+        company: string;
+        date: string;
+        responsibilities: string[];
+    }[];
+    education: {
+        school: string;
+        degree: string;
+        date: string;
+    }[];
+    skills: string[];
+}
+
+
 export interface ResumeTemplate {
     id: string;
     name: string;
     description: string;
     thumbnailUrl: string;
-    content: {
-        header: {
-            name: string;
-            contact: {
-                phone: string;
-                email: string;
-                linkedin: string;
-            }
-        },
-        summary: string;
-        experience: {
-            title: string;
-            company: string;
-            date: string;
-            responsibilities: string[];
-        }[];
-        education: {
-            school: string;
-            degree: string;
-            date: string;
-        }[];
-        skills: string[];
-    }
+    content: ResumeTemplateContent
 }
 
 

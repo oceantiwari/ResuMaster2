@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { ArrowRight, Bot, DraftingCompass, FileText, Goal, Sparkles, Target } from "lucide-react";
+import { ArrowRight, Bot, DraftingCompass, FileText, Goal, Github, Twitter, Linkedin, Sparkles, Target } from "lucide-react";
 import Logo from "@/components/icons/logo";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -35,7 +35,7 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-4xl font-bold tracking-tighter text-foreground sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-4xl font-bold tracking-tighter text-primary-foreground sm:text-5xl xl:text-6xl/none">
                     Build Your Best Resume with AI
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -125,18 +125,52 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-muted-foreground">
-          &copy; 2024 ResuMaster AI. All rights reserved.
-        </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4">
-            Terms of Service
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4">
-            Privacy
-          </Link>
-        </nav>
+      <footer className="border-t bg-secondary/50 text-foreground">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 py-12 md:px-6">
+          <div className="flex flex-col gap-2">
+            <Link href="/" className="flex items-center gap-2">
+                <Logo className="h-8 w-8 text-primary" />
+                <span className="text-xl font-bold font-headline text-primary-foreground">ResuMaster AI</span>
+            </Link>
+            <p className="text-muted-foreground text-sm">
+              Your AI-powered partner for creating the perfect resume.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-3">Features</h4>
+            <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
+              <Link href="/summary" className="hover:text-primary">Smart Summary</Link>
+              <Link href="/bullets" className="hover:text-primary">AI Bullet Points</Link>
+              <Link href="/match" className="hover:text-primary">Job Match</Link>
+              <Link href="/rewrite" className="hover:text-primary">Content Rewriter</Link>
+            </nav>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-3">Resources</h4>
+            <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
+              <Link href="#" className="hover:text-primary">About Us</Link>
+              <Link href="#" className="hover:text-primary">Blog</Link>
+              <Link href="#" className="hover:text-primary">Contact</Link>
+            </nav>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-3">Legal</h4>
+            <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
+              <Link href="#" className="hover:text-primary">Terms of Service</Link>
+              <Link href="#" className="hover:text-primary">Privacy Policy</Link>
+            </nav>
+          </div>
+        </div>
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-4 md:px-6 border-t border-border">
+          <p className="text-xs text-muted-foreground">
+            &copy; 2024 ResuMaster AI. All rights reserved.
+          </p>
+          <div className="flex gap-4 mt-4 md:mt-0">
+            <Link href="#" className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></Link>
+            <Link href="#" className="text-muted-foreground hover:text-primary"><Github className="h-5 w-5" /></Link>
+            <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></Link>
+          </div>
+        </div>
       </footer>
     </div>
   );

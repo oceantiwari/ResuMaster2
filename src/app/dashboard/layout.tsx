@@ -40,7 +40,7 @@ export default function DashboardLayout({
         <div className="p-4 border-b border-border">
           <Link href="/" className="flex items-center gap-2">
             <Logo className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold font-headline text-card-foreground">
+            <span className="text-xl font-bold font-headline text-foreground">
               ResuMaster
             </span>
           </Link>
@@ -67,7 +67,7 @@ export default function DashboardLayout({
         <header className="flex md:hidden items-center justify-between p-4 border-b border-border">
             <Link href="/" className="flex items-center gap-2">
                 <Logo className="h-8 w-8 text-primary" />
-                <span className="text-xl font-bold font-headline text-primary-foreground">
+                <span className="text-xl font-bold font-headline text-foreground">
                 ResuMaster
                 </span>
             </Link>

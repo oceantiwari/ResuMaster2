@@ -11,7 +11,7 @@ export default function Home() {
       <header className="px-4 lg:px-6 h-16 flex items-center shadow-md">
         <Link href="/" className="flex items-center justify-center gap-2">
           <Logo className="h-8 w-8 text-primary" />
-          <span className="text-xl font-bold font-headline text-primary-foreground">ResuMaster AI</span>
+          <span className="text-xl font-bold font-headline text-foreground">ResuMaster AI</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link
@@ -35,7 +35,7 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-4xl font-bold tracking-tighter text-primary-foreground sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-4xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none">
                     Build Your Best Resume with AI
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -130,7 +130,7 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex items-center gap-2">
                 <Logo className="h-8 w-8 text-primary" />
-                <span className="text-xl font-bold font-headline text-primary-foreground">ResuMaster AI</span>
+                <span className="text-xl font-bold font-headline text-foreground">ResuMaster AI</span>
             </Link>
             <p className="text-muted-foreground text-sm">
               Your AI-powered partner for creating the perfect resume.

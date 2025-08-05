@@ -4,6 +4,7 @@ import { ArrowRight, Bot, DraftingCompass, FileText, Goal, Github, Twitter, Link
 import Logo from "@/components/icons/logo";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export default function Home() {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-4xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-4xl font-bold tracking-tighter text-primary-foreground sm:text-5xl xl:text-6xl/none">
                     Build Your Best Resume with AI
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -120,6 +121,47 @@ export default function Home() {
                   Easily import your existing resume to get started with our AI tools in seconds.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Frequently Asked Questions</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Have questions? We've got answers.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-3xl mt-12">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>How does the AI help me build my resume?</AccordionTrigger>
+                  <AccordionContent>
+                    Our platform uses advanced AI models to help you at every step. It can generate professional summaries from your work history, create impactful bullet points for your job experiences, suggest relevant skills for your target role, and even analyze your resume against a job description to identify what's missing.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>Is my data secure?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, your data is secure. The resume content you paste is stored only in your browser's local storage and is not saved on our servers. When you use an AI feature, only the relevant text is sent to the AI model for processing, and we don't store it after the fact.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Can I download my resume?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes! Once you select a template and use the editor to fill in your details, you'll have an option to download your finished resume as a print-ready PDF file.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>Is this service free to use?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, all the core features of ResuMaster AI, including the AI-powered tools and resume templates, are currently free to use.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </section>

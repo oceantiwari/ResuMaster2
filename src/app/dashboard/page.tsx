@@ -45,7 +45,7 @@ const features = [
 
 export default function DashboardPage() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 animate-in fade-in-0 slide-in-from-top-4 duration-500">
       <div className="space-y-2">
         <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
         <p className="text-muted-foreground">
@@ -54,7 +54,7 @@ export default function DashboardPage() {
       </div>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {features.map((feature) => (
-          <Card key={feature.href}>
+          <Card key={feature.href} className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
               <CardTitle className="text-sm font-medium">{feature.title}</CardTitle>
               <feature.icon className="w-4 h-4 text-muted-foreground" />

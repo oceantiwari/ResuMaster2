@@ -157,7 +157,7 @@ export default function JobMatch({ resumeText }: JobMatchProps) {
             )}
             
             {result && (
-              <div className="w-full space-y-4">
+              <div className="w-full space-y-4 animate-in fade-in-0 duration-500">
                 <div className="rounded-md border border-dashed border-primary p-4">
                   <h3 className="font-semibold mb-2 text-primary-foreground">Missing Keywords:</h3>
                   {result.missingKeywords.length > 0 ? (

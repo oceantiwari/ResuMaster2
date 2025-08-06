@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
-      <header className="px-4 lg:px-6 h-16 flex items-center shadow-md">
+      <header className="px-4 lg:px-6 h-16 flex items-center shadow-md animate-in fade-in-0 duration-500">
         <Link href="/" className="flex items-center justify-center gap-2">
           <Logo className="h-8 w-8 text-primary" />
           <span className="text-xl font-bold font-headline text-foreground">ResuMaster AI</span>
@@ -34,7 +34,7 @@ export default function Home() {
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-background to-secondary">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-4">
+              <div className="flex flex-col justify-center space-y-4 animate-in fade-in-0 slide-in-from-left-8 duration-700">
                 <div className="space-y-2">
                   <h1 className="text-4xl font-bold tracking-tighter text-foreground sm:text-5xl xl:text-6xl/none">
                     Build Your Best Resume with AI
@@ -57,7 +57,7 @@ export default function Home() {
                 width="600"
                 height="400"
                 alt="Hero"
-                className="mx-auto aspect-[3/2] overflow-hidden rounded-xl object-cover sm:w-full"
+                className="mx-auto aspect-[3/2] overflow-hidden rounded-xl object-cover sm:w-full animate-in fade-in-0 slide-in-from-right-8 duration-700"
               />
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Home() {
 
         <section id="features" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in-0 slide-in-from-bottom-8 duration-500">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
                   Key Features
@@ -78,7 +78,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 mt-12">
+            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 mt-12 animate-in fade-in-0 slide-in-from-bottom-12 duration-700">
               <div className="grid gap-1 text-center">
                 <Sparkles className="h-8 w-8 mx-auto text-primary"/>
                 <h3 className="text-lg font-bold">Smart Summary</h3>
@@ -127,7 +127,7 @@ export default function Home() {
 
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
           <div className="container px-4 md:px-6">
-            <div className="mx-auto max-w-3xl">
+            <div className="mx-auto max-w-3xl animate-in fade-in-0 slide-in-from-bottom-8 duration-500">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
                   <AccordionTrigger>How does the AI help me build my resume?</AccordionTrigger>

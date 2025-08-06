@@ -130,7 +130,7 @@ export default function SkillsSuggester() {
               </div>
             )}
             {result && (
-              <div className="w-full grid gap-4 sm:grid-cols-2">
+              <div className="w-full grid gap-4 sm:grid-cols-2 animate-in fade-in-0 duration-500">
                 <div className="rounded-md border border-dashed border-primary p-4">
                   <h3 className="font-semibold mb-2 text-primary-foreground">Hard Skills</h3>
                   <div className="flex flex-wrap gap-2">

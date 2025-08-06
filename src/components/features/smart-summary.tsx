@@ -99,7 +99,7 @@ export default function SmartSummary({ resumeText }: SmartSummaryProps) {
         </Button>
         {loading && <Skeleton className="h-24 w-full" />}
         {result && (
-          <div className="w-full rounded-md border border-dashed border-primary p-4">
+          <div className="w-full rounded-md border border-dashed border-primary p-4 animate-in fade-in-0 duration-500">
             <h3 className="font-semibold mb-2 text-primary-foreground">Generated Summary:</h3>
             <p className="text-muted-foreground">{result.summary}</p>
           </div>

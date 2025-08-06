@@ -121,7 +121,7 @@ export default function AiBulletPoints() {
               </div>
             )}
             {result && result.bulletPoints.length > 0 && (
-              <div className="w-full rounded-md border border-dashed border-primary p-4">
+              <div className="w-full rounded-md border border-dashed border-primary p-4 animate-in fade-in-0 duration-500">
                  <h3 className="font-semibold mb-2 text-primary-foreground">Suggestions:</h3>
                 <ul className="list-disc space-y-2 pl-5">
                   {result.bulletPoints.map((point, index) => (

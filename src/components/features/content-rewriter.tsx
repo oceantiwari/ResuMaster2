@@ -140,7 +140,7 @@ export default function ContentRewriter() {
             </Button>
             {loading && <Skeleton className="h-24 w-full" />}
             {result && (
-               <div className="w-full rounded-md border border-dashed border-primary p-4">
+               <div className="w-full rounded-md border border-dashed border-primary p-4 animate-in fade-in-0 duration-500">
                 <h3 className="font-semibold mb-2 text-primary-foreground">Rewritten Content:</h3>
                 <p className="text-muted-foreground">{result.rewrittenSection}</p>
               </div>
